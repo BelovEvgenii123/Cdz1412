@@ -5,22 +5,22 @@
 // 8 7,8 -7,1 9
 
 
-void InputM(double[, ]m)
+void InputM(double[,] m)
 {
-    for (int i=0;i < m.GetLength(0);i++)
+    for (int i = 0; i < m.GetLength(0); i++)
     {
-        for (int j=0; j< m.GetLength(1);j++)
+        for (int j = 0; j < m.GetLength(1); j++)
         {
-        m[i, j] =new Random().NextDouble() * (10+10)-10;
-        Console.Write($"{Math.Round(m[i, j],1)} \t");
+            m[i, j] = new Random().NextDouble() * (10 + 10) - 10;
+            Console.Write($"{Math.Round(m[i, j], 1)} \t");
         }
         Console.WriteLine();
     }
-    
+
 }
 
 Console.Clear();
 Console.Write("Введите размер матрицы: ");
 string[] n = Console.ReadLine().Split(" ");
-double[,] m = new double [int.Parse(n[0]), int.Parse(n[1])];
+double[,] m = new double[int.Parse(n[0]), int.Parse(n[1])];
 InputM(m);
